@@ -1,0 +1,44 @@
+﻿<Window x:Class="Feeder_Manager.Users"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Feeder_Manager"
+         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Users" Height="588.467" Width="495.698" Topmost="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC1BFD1" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel x:Name="MainGrid" Orientation="Vertical" Visibility="Visible">
+            <DataGrid x:Name="EmpGrid" HorizontalAlignment="Center" IsReadOnly="True" Height="244" Margin="0,10,0,0" VerticalAlignment="Top" Width="460" SelectionUnit="FullRow" SelectedCellsChanged="Grid_SelectionChanged" AutoGenerateColumns="False" FontSize="14" Background="White" CanUserAddRows="false" BorderThickness="0" RowHeight="37">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="UserID" Binding="{Binding UserID}" Width="Auto"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding UserName}" Width="Auto"/>
+                    <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="Auto"/>
+                    <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal" Height="Auto">
+                <StackPanel Orientation="Vertical">
+                    <TextBox x:Name="NameTxt" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10,0,0,0" Height="52" Width="200" FontSize="16"/>
+                    <TextBox x:Name="WNTxt" materialDesign:HintAssist.Hint="Work Number" TextChanged="WNTxt_TextChanged" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10,0,0,0" Height="52" Width="200" FontSize="16"/>
+                    <TextBox x:Name="PassTxt" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" Margin="10,0,0,0" Height="52" Width="200" FontSize="16"/>
+                    <ComboBox x:Name="RoleCB" materialDesign:HintAssist.Hint="Role" ItemsSource="{Binding LongListToTestComboVirtualization}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Center" Margin="10,0,0,0" Height="52" Width="200" FontSize="16"/>
+                </StackPanel>
+                <Image x:Name="ProfileImg" HorizontalAlignment="Left" Height="155" Margin="70,30,0,0" VerticalAlignment="Top" Width="149" Visibility="Visible"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                <Button x:Name="AddBtn" Content="Add" HorizontalAlignment="Left" Click="Add_Click" Margin="25,0,0,0" VerticalAlignment="Top" Width="86" Height="30" RenderTransformOrigin="1.526,0.538" Background="#FFC1BFD1" BorderBrush="#FFC1BFD1" Foreground="Black"/>
+                <Button x:Name="delBtn" Content="Delete"  HorizontalAlignment="Left" Click="Delete_Click" Margin="5,0,0,0" VerticalAlignment="Top" Width="86" Height="30" RenderTransformOrigin="1.74,0.696" Background="#FFC1BFD1" Foreground="#FF040404" BorderBrush="#FFC1BFD1"/>
+                <Button x:Name="UpdateBtn" Content="Update"  HorizontalAlignment="Left" Click="Update_Click" Margin="5,0,0,0" VerticalAlignment="Top" Width="86" Height="30" RenderTransformOrigin="1.74,0.696" Foreground="Black" BorderBrush="#FFC1BFD1" Background="#FFC1BFD1"/>
+                <Button x:Name="clrBtn" Content="Clear" HorizontalAlignment="Left" Click="Clear_Click" Margin="5,0,0,0" VerticalAlignment="Top" Width="86" Height="30" RenderTransformOrigin="1.74,0.696" Foreground="Black" Background="#FFC1BFD1" BorderBrush="#FFC1BFD1"/>
+                <Button x:Name="CloseBtn" Content="Close" HorizontalAlignment="Left" Click="Close_Click" Margin="5,0,0,0" VerticalAlignment="Top" Width="75" Height="30" RenderTransformOrigin="1.74,0.696" BorderBrush="#FFC1BFD1" Background="#FFC1BFD1" Foreground="Black"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

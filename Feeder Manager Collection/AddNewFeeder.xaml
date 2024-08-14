@@ -1,0 +1,60 @@
+﻿<Window x:Class="Feeder_Manager.AddNewFeeder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Feeder_Manager"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Add New Feeder" Height="529.622" Width="452.729" Topmost="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI Emoji">
+    <Grid>
+        <Border BorderBrush="#FFC1BFD1" BorderThickness="2"></Border>
+        <Rectangle Height="365" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC8CBCF"/>
+                    <GradientStop Color="#FFC1BFD1" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Add New Feeder" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="36" FontWeight="Bold" Foreground="#DD000000"/>
+        <Rectangle Height="332" VerticalAlignment="Bottom" Margin="35,0,35,81" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <StackPanel Orientation="Vertical" Margin="52,77,35,76">
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                <Label Content="Feeder ID: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="Feeder_ID" HorizontalAlignment="Left" TextAlignment="Center"  VerticalAlignment="Top" Width="191" Margin="52,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2" TextChanged="Feeder_ID_TextChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="User ID: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="User_ID" HorizontalAlignment="Left" TextAlignment="Center" VerticalAlignment="Top" Width="191" Margin="69,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Feeder Type: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <ComboBox x:Name="Feeder_Type" HorizontalAlignment="Left" IsEditable="True" HorizontalContentAlignment="Center" Height="31" Margin="33,0,0,0"  VerticalAlignment="Top" Width="191" FontSize="18" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Feeder Sensor: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <ComboBox x:Name="Feeder_Sensor" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="31" Margin="19,0,0,0"  VerticalAlignment="Top" Width="191" FontSize="18" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2">
+                    <ComboBoxItem Content="Yes" HorizontalContentAlignment="Center"/>
+                    <ComboBoxItem Content="No"  HorizontalContentAlignment="Center"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Feeder Status: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="Fedder_Status" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Margin="23,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Calibration Date: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="Calibration_Date" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Margin="5,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,436,0,0">
+            <Button x:Name="OKBtn" Content="OK" HorizontalAlignment="Left" Click="Ok_Click" Margin="145,0,0,0" VerticalAlignment="Center" Width="80" Height="30" Background="#FFC1BFD1" BorderBrush="#FFC1BFD1" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="CloseBtn" Content="Cancel" HorizontalAlignment="Left" IsCancel="True" Margin="25,0,0,0" VerticalAlignment="Center" Width="80" Height="30" Background="#FFC1BFD1" BorderBrush="#FFC1BFD1" Foreground="Black" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

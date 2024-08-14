@@ -1,0 +1,252 @@
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.config
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.lref
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.g.resources
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder_Manager.Properties.Resources.resources
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.GenerateResource.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CoreCompileInputs.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CopyComplete
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.manifest
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.application
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe.manifest
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.application
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.config
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.manifest
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.application
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.pdb
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\System.ComponentModel.Annotations.dll
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.xml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.pdb
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.xml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.pdb
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.xml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.pdb
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Users.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.cache
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.lref
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Users.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.g.resources
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder_Manager.Properties.Resources.resources
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.GenerateResource.cache
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CoreCompileInputs.cache
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe.manifest
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.application
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CopyComplete
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.pdb
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\ChangeMalType.g.cs
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\ChangeMalType.baml
+C:\shahar\Application\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csprojAssemblyReference.cache
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.config
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.manifest
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.application
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.pdb
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\System.ComponentModel.Annotations.dll
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.xml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.pdb
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.xml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.pdb
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.xml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.pdb
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\ChangeMalType.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Users.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.cache
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.lref
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\ChangeMalType.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Users.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.g.resources
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder_Manager.Properties.Resources.resources
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.GenerateResource.cache
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CoreCompileInputs.cache
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe.manifest
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.application
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CopyComplete
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.pdb
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\EditFeeder.g.cs
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\EditFeeder.baml
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.AssemblyReference.cache
+C:\shahar\Application\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.SuggestedBindingRedirects.cache
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.config
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe.manifest
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.application
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.exe
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager.pdb
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.xml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.pdb
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.xml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.pdb
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.AssemblyReference.cache
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\EditFeeder.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\ChangeMalType.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Users.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.g.cs
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.cache
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager_MarkupCompile.lref
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\About.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\EditFeeder.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewFeeder.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\AddNewTable.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\CalibrateFeeder.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\ChangeMalType.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteFeeder.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\DeleteTable.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Export.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenMalfunction.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\OpenTableMal.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Statistics.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Users.baml
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.g.resources
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder_Manager.Properties.Resources.resources
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.GenerateResource.cache
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CoreCompileInputs.cache
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe.manifest
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.application
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.csproj.CopyComplete
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.exe
+C:\Users\shahar.a\Downloads\Fedders App\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager.pdb

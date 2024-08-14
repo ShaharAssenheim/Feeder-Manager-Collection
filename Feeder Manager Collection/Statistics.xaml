@@ -1,0 +1,140 @@
+﻿<Window x:Class="Feeder_Manager.Statistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Feeder_Manager"
+        Closed="Window_Closed"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d" Foreground="White"  WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}}" Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}}">
+    <Viewbox Stretch="Fill" StretchDirection="Both">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="FeedersGrid" Orientation="Vertical" Visibility="Visible" Grid.Row="1" Grid.Column="1">
+            <StackPanel x:Name="FeederSP1" Width="1600" Height="480" Margin="0,0,0,0">
+                <TextBlock x:Name="FeederHeader1" HorizontalAlignment="Center" TextAlignment="Center" Text="Feeder Mulfunctions By Weeks" Margin="0,20,0,0" FontSize="30" FontWeight="Bold" FontFamily="WS Simple Gallifreyan" Foreground="#DD000000"/>
+                <Button x:Name="BtnFeederOpen" Style="{DynamicResource MaterialDesignRaisedButton}" materialDesign:ShadowAssist.ShadowDepth="Depth3" materialDesign:ButtonAssist.CornerRadius="50" Height="400" Width="1500" Margin="0,10,0,0" Background="White" BorderBrush="{x:Null}">
+                    <Wpf:CartesianChart x:Name="FeederOpenChart" Series="{Binding FeederOpenSeries}" Foreground="Black" LegendLocation="Top"  Height="399" Width="1480">
+                        <Wpf:CartesianChart.AxisX>
+                            <Wpf:Axis x:Name="FeederOpenAxisX" Title="" FontSize="18" Labels="{Binding FeederOpenLabels}" Foreground="Black"></Wpf:Axis>
+                        </Wpf:CartesianChart.AxisX>
+                        <Wpf:CartesianChart.AxisY>
+                            <Wpf:Axis x:Name="FeederOpenAxisY" Title=""  FontSize="18" LabelFormatter="{Binding FeederOpenFormatter}" Foreground="Black"></Wpf:Axis>
+                        </Wpf:CartesianChart.AxisY>
+                    </Wpf:CartesianChart>
+                </Button>
+            </StackPanel>
+            <StackPanel x:Name="FeederSP2" Width="1600" Height="480" Orientation="Vertical" Background="White" Margin="0,30,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnLeft" Click="BtnLeft_Click"  Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Previous Week" Margin="500,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Height="Auto" Width="Auto">
+                            <materialDesign:PackIcon Kind="ChevronLeft" Height="40" Width="40" />
+                        </Button>
+                        <TextBlock x:Name="FeederHeader2" VerticalAlignment="Bottom" HorizontalAlignment="Center" TextAlignment="Center" Text="Feeder Mulfunctions Reason Week-21" Margin="0,0,0,0" FontSize="30" FontWeight="Bold" FontFamily="WS Simple Gallifreyan" Foreground="#DD000000"/>
+
+                        <Button x:Name="BtnRight" Click="BtnRight_Click"  Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Next Week" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Height="Auto" Width="Auto">
+                            <materialDesign:PackIcon Kind="ChevronRight" Height="40" Width="40" />
+                        </Button>
+                    </StackPanel>
+                <Button x:Name="BtnFeederClose" Style="{DynamicResource MaterialDesignRaisedButton}" materialDesign:ShadowAssist.ShadowDepth="Depth3" materialDesign:ButtonAssist.CornerRadius="50" Height="400"  Width="1500" Margin="0,10,0,0" Background="White" BorderBrush="{x:Null}">
+                        <Wpf:CartesianChart  x:Name="FeederReasonChart" Series="{Binding FeederReasonSeries}" Foreground="Black" LegendLocation="Top"  Height="399" Width="1480">
+                            <Wpf:CartesianChart.AxisX>
+                                <Wpf:Axis x:Name="FeederReasonAxisX" Title="" FontSize="18" Labels="{Binding FeederReasonLabels}" Foreground="Black"></Wpf:Axis>
+                            </Wpf:CartesianChart.AxisX>
+                            <Wpf:CartesianChart.AxisY>
+                                <Wpf:Axis x:Name="FeederReasonAxisY" Title=""  FontSize="18" LabelFormatter="{Binding FeederReasonFormatter}" Foreground="Black"></Wpf:Axis>
+                            </Wpf:CartesianChart.AxisY>
+                        </Wpf:CartesianChart>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="TablesGrid" Visibility="Hidden" Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <StackPanel x:Name="TableSP1" Width="1600" Height="480" Orientation="Vertical" Margin="0,0,0,0">
+                <TextBlock x:Name="TableHeader1" HorizontalAlignment="Center" TextAlignment="Center" Text="Table Mulfunctions By Weeks" Margin="0,20,0,0" FontSize="30" FontWeight="Bold" FontFamily="WS Simple Gallifreyan" Foreground="#DD000000"/>
+                <Button x:Name="BtnTableOpen" Style="{DynamicResource MaterialDesignRaisedButton}" materialDesign:ShadowAssist.ShadowDepth="Depth3" materialDesign:ButtonAssist.CornerRadius="50" Height="400" Width="1500" Margin="0,10,0,0" Background="White" BorderBrush="{x:Null}">
+                    <Wpf:CartesianChart x:Name="TableOpenChart" Series="{Binding TableOpenSeries}" Foreground="Black" LegendLocation="Top"  Height="375" Width="1474">
+                        <Wpf:CartesianChart.AxisX>
+                            <Wpf:Axis x:Name="TableOpenAxisX" Title="" FontSize="18" Labels="{Binding TableOpenLabels}" Foreground="Black"></Wpf:Axis>
+                        </Wpf:CartesianChart.AxisX>
+                        <Wpf:CartesianChart.AxisY>
+                            <Wpf:Axis x:Name="TableOpenAxisY" Title=""  FontSize="18" LabelFormatter="{Binding TableOpenFormatter}" Foreground="Black"></Wpf:Axis>
+                        </Wpf:CartesianChart.AxisY>
+                    </Wpf:CartesianChart>
+                </Button>
+            </StackPanel>
+            <StackPanel x:Name="TableSP2" Width="1600" Height="480" Orientation="Vertical" Background="White" Margin="0,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="TableBtnLeft" Click="TableBtnLeft_Click"  Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Previous Week" Margin="500,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Height="Auto" Width="Auto">
+                            <materialDesign:PackIcon Kind="ChevronLeft" Height="40" Width="40" />
+                        </Button>
+                        <TextBlock x:Name="TableHeader2" VerticalAlignment="Bottom" HorizontalAlignment="Center" TextAlignment="Center" Text="Table Mulfunctions Reason Week-21" Margin="0,0,0,0" FontSize="30" FontWeight="Bold" FontFamily="WS Simple Gallifreyan" Foreground="#DD000000"/>
+
+                        <Button x:Name="TableBtnRight" Click="TableBtnRight_Click"  Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Next Week" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Height="Auto" Width="Auto">
+                            <materialDesign:PackIcon Kind="ChevronRight" Height="40" Width="40" />
+                        </Button>
+                    </StackPanel>
+                    <Button x:Name="BtnTableClose" Style="{DynamicResource MaterialDesignRaisedButton}" materialDesign:ShadowAssist.ShadowDepth="Depth3" materialDesign:ButtonAssist.CornerRadius="50" Height="400" Width="1500" Margin="0,10,0,0" Background="White" BorderBrush="{x:Null}">
+                    <Wpf:CartesianChart x:Name="TableReasonChart" Series="{Binding TableCloseSeries}" Foreground="Black" LegendLocation="Top"  Height="375" Width="1470">
+                        <Wpf:CartesianChart.AxisX>
+                            <Wpf:Axis x:Name="TableCloseAxisX" Title="" FontSize="18" Labels="{Binding TableCloseLabels}" Foreground="Black"></Wpf:Axis>
+                        </Wpf:CartesianChart.AxisX>
+                        <Wpf:CartesianChart.AxisY>
+                            <Wpf:Axis x:Name="TableCloseAxisY" Title=""  FontSize="18" LabelFormatter="{Binding TableCloseFormatter}" Foreground="Black"></Wpf:Axis>
+                        </Wpf:CartesianChart.AxisY>
+                    </Wpf:CartesianChart>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Background="#FFBFBFBF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+            <Grid Background="#FFBFBFBF">
+                <materialDesign:PackIcon Kind="GoogleAnalytics" VerticalAlignment="Center" Height="38" Margin="6,0,0,35" Width="49"/>
+                <TextBlock Text="Statistics" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="White" FontSize="36" Margin="52,0,10,30"/>
+                <Button Margin="72,87,81,21" Style="{StaticResource MaterialDesignFloatingActionLightButton}" ToolTip="Light/Dark Mode" Background="White" BorderBrush="#FFACA8B2" Foreground="Black" Click="Mode_Click" Height="Auto" Width="Auto">
+                    <materialDesign:PackIcon Kind="ThemeLightDark" Height="24" Width="24" />
+                </Button>
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+                <Button x:Name="FeederBtn" Margin="10,0,10,0" Background="White" BorderBrush="#FFACA8B2" materialDesign:ShadowAssist.ShadowDepth="Depth4" Foreground="Black" Click="Fedders_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="GoogleAnalytics" VerticalAlignment="Center" Margin="0,0,0,1"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Feeders" FontFamily="Champagne &amp; Limousines" Margin="47,0,16,0" FontSize="16" Width="87"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="TableBtn" Margin="10,20,10,0" Background="White" BorderBrush="#FFACA8B2" materialDesign:ShadowAssist.ShadowDepth="Depth4" Foreground="Black" Click="Tables_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="GoogleAnalytics" VerticalAlignment="Center" Margin="0,0,0,1"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Tables" FontFamily="Champagne &amp; Limousines" Margin="47,0,16,0" FontSize="16" Width="87"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10,20,10,0" Background="White" BorderBrush="#FFACA8B2" materialDesign:ShadowAssist.ShadowDepth="Depth4" Foreground="Black" Click="Window_Closed">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ExitToApp" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Exit" FontFamily="Champagne &amp; Limousines" FontSize="16"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid  Grid.ColumnSpan="2" Background="#FFBFBFBF">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+    </Viewbox>
+</Window>

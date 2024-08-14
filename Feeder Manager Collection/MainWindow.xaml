@@ -1,0 +1,525 @@
+﻿<Window x:Class="Feeder_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Feeder_Manager"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       mc:Ignorable="d" Title="Feeder Manager Collection" Foreground="White"  WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}}" Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}}">
+    <Window.Resources>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+         <Style TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="DataGridCell">
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Viewbox Stretch="Fill" StretchDirection="Both">
+        <Grid Margin="0,0,0,0"  VerticalAlignment="Top" Height="1050" Background="#FFEAEAEA">
+            <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="1050" Width="1845">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <GroupBox x:Name="FeederHeader" Visibility="Hidden" Style="{DynamicResource MaterialDesignCardGroupBox}" Grid.Row="0" Margin="202,10,143,0" Width="1500" Height="380" HorizontalAlignment="Center" VerticalAlignment="Top" materialDesign:ColorZoneAssist.Mode="Custom"  materialDesign:ColorZoneAssist.Foreground="White">
+                    <StackPanel Orientation="Vertical" Margin="0,-14,0,0" Width="1490">
+                        <StackPanel Background="#FFBFBFBF" Height="60" Orientation="Horizontal" Margin="0,0,10,0">
+                            <StackPanel Orientation="Horizontal" Width="300">
+                                <Ellipse Width="40" Height="40" Margin="10,0,0,0">
+                                    <Ellipse.Fill>
+                                        <ImageBrush x:Name="ProfileImage" ImageSource="/Resources/exit.png"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <TextBox x:Name="ProfileName" IsReadOnly="True" Text="" Margin="5,0,0,0" Width="Auto" Height="40" VerticalContentAlignment="Center" BorderThickness="0" Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock x:Name="HeaderTxt"  Margin="300,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Feeder Manager" FlowDirection="RightToLeft" FontSize="30" FontWeight="Bold" Foreground="Black"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                            <StackPanel Orientation="Horizontal" Width="800">
+                                <StackPanel Orientation="Vertical" Width="400">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Enter Feeder ID" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="FeederID_txt" TextAlignment="Center" Width="192" Margin="60,0,0,0" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                        <Button Margin="10,0,0,0" Click="SearchFeeder_Click" BorderBrush="{x:Null}" Cursor="Hand">
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="Resources/search.png" Stretch="Fill"/>
+                                            </Button.Background>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="User ID" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="UserId_txt" Width="235" Text="" TextAlignment="Center" Margin="109,0,0,0" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Feeder Type" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="FeederType_txt" Width="235" Margin="79,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Feeder Status" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <ComboBox x:Name="FeederStatus_txt" Width="235" Margin="71,0,0,0" BorderThickness="1" Foreground="Black" FontSize="14" HorizontalContentAlignment="Center" DropDownClosed="FeederStatus_txt_DropDownClosed"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Calibration Date Expired" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="CalibrationExp_txt" Width="235" Margin="5,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Malfunction Count" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="MalCount_Txt" Width="235" Margin="39,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                   
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                                    <StackPanel x:Name="MalDateGrid" Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Malfunction Date" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="MalDate_txt" Width="230" Margin="20,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel  x:Name="MalTypeGrid" Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Label Content="Malfunction Type" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="MalType_txt" Width="185" Margin="20,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                        <Button x:Name="ChangeMalBtn" Margin="10,0,0,0" Click="ChangeMalType_Click" IsEnabled="False" BorderBrush="{x:Null}" Cursor="Hand" ToolTip="Change Mulfunction Type">
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="Resources/change.png" Stretch="Fill"/>
+                                            </Button.Background>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel x:Name="TechID" Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Label Content="Technician Id" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="14" Width="Auto"/>
+                                        <TextBox x:Name="TechId_txt" Width="230" Margin="47,0,0,0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Margin="0,6,0,0">
+                                        <Label Content="Result" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="Result_txt" BorderThickness="1" Width="365" Height="63" Foreground="Black" FontSize="14" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                        <CheckBox x:Name="CalibrateCheckBox" Checked="CalibrateCheckBox_Checked" Visibility="Collapsed" Content="Calibrate Feeder" Foreground="Black"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                        <Button x:Name="CloseMal" Width="127" Content="     Close&#xa;Malfunction" Click="CloseMal_Click" HorizontalContentAlignment="Center" Height="50" Margin="35,0,0,0"  Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black"/>
+                                        <Button x:Name="DelMal" Width="127" Content="   Delete&#xa;Malfunction" Click="DelMal_Click" Height="50" Margin="50,0,0,0"  Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Width="520" Margin="160,0,0,0">
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                    <Button x:Name="ShowAllFeeders" Content="Show All Feeders" Click="ShowAllFeeders_Click" Visibility="Visible" Margin="100,0,0,0" Width="160" Height="55" Background="LightGray" BorderBrush="LightGray" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+                                    <Button x:Name="ShowAllMal" Content="    Show All&#x0a;Malfunctions" Click="ShowAllMal_Click" Visibility="Visible" Margin="10,0,0,0" Width="160" Height="55" Background="LightGray" BorderBrush="LightGray" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+                                    <Button x:Name="ShowChecklist" Content="Show CheckList" Visibility="Hidden" Click="ShowChecklist_Click" Margin="10,0,0,0" Width="160" Height="55" Background="LightGray" BorderBrush="LightGray" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Name="TableHeader" Visibility="Hidden" Style="{DynamicResource MaterialDesignCardGroupBox}" Grid.Row="0" Margin="202,10,143,0" Width="1500" Height="380" HorizontalAlignment="Center" VerticalAlignment="Top" materialDesign:ColorZoneAssist.Mode="Custom"  materialDesign:ColorZoneAssist.Foreground="White">
+                    <StackPanel Orientation="Vertical" Margin="0,-14,0,0" Width="1490">
+                        <StackPanel Orientation="Horizontal" Background="#FFBFBFBF" Height="60" Margin="0,0,10,0">
+                            <StackPanel Orientation="Horizontal" Width="300">
+                                <Ellipse Width="40" Height="40" Margin="10,0,0,0">
+                                    <Ellipse.Fill>
+                                        <ImageBrush x:Name="ProfileImage2" ImageSource="/Resources/exit.png"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <TextBox x:Name="ProfileName2" IsReadOnly="True" Text="" Margin="5,0,0,0" Width="Auto" Height="40" VerticalContentAlignment="Center" BorderThickness="0" Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock x:Name="TableHeaderTxt"  Margin="300,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Table Manager" FlowDirection="RightToLeft" FontSize="30" FontWeight="Bold" Foreground="Black"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                            <StackPanel Orientation="Horizontal" Width="800">
+                                <StackPanel Orientation="Vertical" Width="380">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="Enter Table ID" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableID_txt" TextAlignment="Center" Width="140" Margin="86,0,0,0" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                        <Button Margin="10,0,0,0" Click="SearchTable_Click" BorderBrush="{x:Null}" Cursor="Hand">
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="Resources/search.png" Stretch="Fill"/>
+                                            </Button.Background>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="User ID" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableUserId_txt" Width="182" Text="" TextAlignment="Center" Margin="126,0,0,0" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Table Type" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableType_txt" Width="182" Margin="106,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Table Status" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableStatus_txt" Width="182" Margin="98,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Malfunction Count" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableMalCount_Txt" Width="182" Margin="56,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Malfunction Type" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableMalType_txt" Width="182" Margin="64,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Malfunction Date Opned" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableMalDateOpen_txt" Width="182" Margin="18,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Malfunction Date Closed" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableMalDateClose_txt" Width="182" Margin="19,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                                    <StackPanel Orientation="Vertical" >
+                                        <Label Content="Technician Id" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="14" Width="168"/>
+                                        <TextBox x:Name="TableTechId_txt" Width="304" Margin="5,0,0,0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                        <Label Content="Result" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="TableResult_txt" BorderThickness="1" Width="304" Height="63" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                        <Button x:Name="TableCloseMal" Width="127" Content="     Close&#xa;Malfunction" Click="CloseTableMal_Click" HorizontalContentAlignment="Center" Height="50" Margin="5,0,0,0"  Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black"/>
+                                        <Button x:Name="TableDelMal" Width="127" Content="   Delete&#xa;Malfunction" Click="DelTableMal_Click" Height="50" Margin="50,0,0,0"  Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Width="350" Margin="350,0,0,0">
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                    <Button x:Name="ShowAllTables" Content="Show All Tables" Click="ShowAllTables_Click" Visibility="Visible" Margin="0,0,0,0" Width="160" Height="55" Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+                                    <Button x:Name="ShowAllTableMal" Content="    Show All&#x0a;Malfunctions" Click="ShowAllTableMal_Click" Visibility="Visible" Margin="10,0,0,0" Width="160" Height="55" Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Name="SegmentHeader" Visibility="Hidden" Style="{DynamicResource MaterialDesignCardGroupBox}" Grid.Row="0" Margin="202,10,143,0" Width="1500" Height="380" HorizontalAlignment="Center" VerticalAlignment="Top" materialDesign:ColorZoneAssist.Mode="Custom"  materialDesign:ColorZoneAssist.Foreground="White">
+                    <StackPanel Orientation="Vertical" Margin="0,-14,0,0" Width="1490">
+                        <StackPanel Orientation="Horizontal" Background="#FFBFBFBF" Height="60" Margin="0,0,10,0">
+                            <StackPanel Orientation="Horizontal" Width="300">
+                                <Ellipse Width="40" Height="40" Margin="10,0,0,0">
+                                    <Ellipse.Fill>
+                                        <ImageBrush x:Name="ProfileImage3" ImageSource="/Resources/exit.png"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <TextBox x:Name="ProfileName3" IsReadOnly="True" Text="" Margin="5,0,0,0" Width="Auto" Height="40" VerticalContentAlignment="Center" BorderThickness="0" Foreground="Black" FontSize="16" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock x:Name="SegmentHeaderTxt"  Margin="300,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Segment Manager" FlowDirection="RightToLeft" FontSize="30" FontWeight="Bold" Foreground="Black"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                            <StackPanel Orientation="Horizontal" Width="800">
+                                <StackPanel Orientation="Vertical" Width="380">
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <Label Content="Line" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="SegmentLine_txt" Width="230" Text="" TextAlignment="Center" Margin="105,0,0,0" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                        <Label Content="Machine" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="SegmentMachine_txt" Width="230" Margin="77,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                        <Label Content="Segment Number" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="SegmentNumber_txt" Width="230" Margin="20,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                        <Label Content="Omit Segment" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="OmitSegmentCount_Txt" Width="230" Margin="40,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                        <Label Content="Setup" Margin="0,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="SegmentSetup_txt" Width="230" Margin="94,0,0,0" TextAlignment="Center" IsReadOnly="True" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                                    <StackPanel Orientation="Vertical" >
+                                        <Label Content="Technician Id" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="14" Width="168"/>
+                                        <TextBox x:Name="SegmentTechId_txt" Width="304" Margin="5,0,0,0" HorizontalAlignment="Left" HorizontalContentAlignment="Center" BorderThickness="1" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                                        <Label Content="Result" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="14"/>
+                                        <TextBox x:Name="SegmentResult_txt" BorderThickness="1" Width="304" Height="63" Foreground="Black" FontSize="14"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                        <Button x:Name="SegmentCloseMal" Width="127" IsEnabled="False" Content="     Close&#xa;Malfunction" Click="CloseTableMal_Click" HorizontalContentAlignment="Center" Height="50" Margin="5,0,0,0"  Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black"/>
+                                        <Button x:Name="SegmentDelMal" Width="127" IsEnabled="False" Content="   Delete&#xa;Malfunction" Click="DelTableMal_Click" Height="50" Margin="50,0,0,0"  Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox x:Name="GridBoxFeeder" Visibility="Hidden" Style="{DynamicResource MaterialDesignCardGroupBox}" Grid.Row="1" Margin="60,0,0,0" Width="1500" Height="633" HorizontalAlignment="Center" VerticalAlignment="Top" materialDesign:ColorZoneAssist.Mode="Custom" materialDesign:ColorZoneAssist.Foreground="White">
+                    <Grid>
+                        <StackPanel x:Name="MalfunctionSP" Visibility="Visible" Orientation="Vertical" Margin="0,-25,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox x:Name="ClosedMalCheck" Checked="ClosedMalCheck_Checked" Unchecked="ClosedMalCheck_Unchecked" Content="Show Closed Malfunction" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <CheckBox x:Name="OpenMalCheck"  Margin="20,0,0,0" Checked="OpenMalCheck_Checked" Unchecked="OpenMalCheck_Unchecked" Content="Show Opened Malfunction" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <Label x:Name="MalFeederHeader" Width="320" Content="Feeder Malfunctions List" Margin="290,0,0,0" FontWeight="Bold" FontSize="18"/>
+                                <Button  Margin="355,0,0,0" Click="OpenMal_Click" Height="25" Width="170" Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="PlusBox" Height="21" />
+                                        <TextBlock Text="Open Mulfunction" Margin="5,0,0,0"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <DataGrid x:Name="MalfunctionDG" Margin="0,10,0,0" Height="580" RowHeight="35" Width="Auto" CanUserAddRows="False" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" FontSize="18" VerticalGridLinesBrush="Gray" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray" MouseLeftButtonUp="MalfunctionDG_MouseLeftButtonUp" SelectionMode="Single" SelectionUnit="FullRow">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Feeder&#xa;    Id" Binding="{Binding FeederId}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="User&#xa;  Id" Binding="{Binding UserId}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Feeder&#xa; Type" Binding="{Binding FeederType}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Feeder&#xa;Status" Binding="{Binding FeederStatus}" Width="Auto" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Calibration Date&#xa;      Expired" Binding="{Binding CalibrationDateExpired}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction&#xa;    Count" Binding="{Binding MalfunctionCount}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction&#xa;     Type" Binding="{Binding MalfunctionType}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction Date&#xa;       Opened" Binding="{Binding MalfunctionDateOpened}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction Date&#xa;       Closed" Binding="{Binding MalfunctionDateClosed}" Width="Auto" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Malfunction&#xa;    Result" Binding="{Binding MalfunctionResult}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Technician&#xa;      Id" Binding="{Binding TechnicianId}" Width="*" IsReadOnly="True" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                        <StackPanel x:Name="FeederSP" Visibility="Hidden" Orientation="Vertical" Margin="0,-25,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox x:Name="InWorkFeederCheck" Content="Show In Work" Checked="InWorkFeeder_Checked" Unchecked="InWorkFeeder_Unchecked" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <CheckBox x:Name="OpenMalFeederCheck" Checked="OpenMalFeeder_Checked" Unchecked="OpenMalFeeder_Unchecked" Margin="20,0,0,0" Content="Show Opened Malfunction" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <Label x:Name="FeederListHeader" Width="300" Content="Feeders List" Margin="385,0,0,0" FontWeight="Bold" FontSize="18"/>
+                                <Button x:Name="AddNewFeeder"  Margin="340,0,0,0" Click="AddNewFeeder_Click" Height="25" Width="170" Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="PlusBox" Height="21" />
+                                        <TextBlock Text="Add New Feeder" Margin="5,0,0,0"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <DataGrid x:Name="FeederDG" Margin="0,10,0,0" Height="580" Width="Auto" CanUserAddRows="False" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" FontSize="18" VerticalGridLinesBrush="Gray" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray" MouseLeftButtonUp="FeederDG_MouseLeftButtonUp">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Feeder Id" Binding="{Binding FeederID}" Width="150" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="User Id" Binding="{Binding UserID}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Feeder Type" Binding="{Binding FeederType}" Width="150" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Feeder&#xa;Sensor" Binding="{Binding FeederSensor}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Feeder Status" Binding="{Binding FeederStatus}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Calibration Date Expired" Binding="{Binding CalibrationDateExpired}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunctions Count" Binding="{Binding MalfunctionCount}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Last Time Checked" Binding="{Binding LastTimeChecked}" Width="250" IsReadOnly="True" />
+                                    <DataGridTemplateColumn Header="Calibrate&#xa;  Feeder"  Width="Auto" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="CalibrateFeeder" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="37" Click="CalibrateFeeder_Click">
+                                                    <Image  Source="/Resources/calibrate.png" Height="30" Width="32"/>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Delete&#xa;Feeder"  Width="Auto" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="DelFeeder" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="37" Click="DelFeeder_Click">
+                                                    <Image  Source="/Resources/delete.png" Height="30" Width="32"/>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="  Edit&#xa;Feeder"  Width="*" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="EditFeeder" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="37" Click="EditFeeder_Click">
+                                                    <Image  Source="/Resources/edit.jpg" Height="30" Width="32"/>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="GridBoxTable" Visibility="Hidden" Style="{DynamicResource MaterialDesignCardGroupBox}" Grid.Row="1" Margin="60,0,0,0" Width="1500" Height="633" HorizontalAlignment="Center" VerticalAlignment="Top" materialDesign:ColorZoneAssist.Mode="Custom" materialDesign:ColorZoneAssist.Foreground="White">
+                    <Grid>
+                        <StackPanel x:Name="TableMalfunctionSP" Visibility="Visible" Orientation="Vertical" Margin="0,-25,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox x:Name="TableClosedMalCheck" Checked="TableClosedMal_Checked" Unchecked="TableClosedMal_Unchecked" Content="Show Closed Malfunction" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <CheckBox x:Name="TableOpenMalCheck"  Margin="20,0,0,0" Checked="TableOpenMal_Checked" Unchecked="TableOpenMal_Unchecked" Content="Show Opened Malfunction" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <Label x:Name="TableMalHeader" Content="Table Malfunctions List" Width="270" Margin="270,0,0,0" FontWeight="Bold" FontSize="18"/>
+                                <Button  Margin="425,0,0,0" Click="OpenTableMal_Click" Height="25" Width="170" Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="PlusBox" Height="21" />
+                                        <TextBlock Text="Open Mulfunction" Margin="5,0,0,0"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <DataGrid x:Name="TableMalfunctionDG" Margin="0,10,0,0" Height="580" Width="Auto" CanUserAddRows="False" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" FontSize="18" VerticalGridLinesBrush="Gray" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray" MouseLeftButtonUp="MalfunctionTableDG_MouseLeftButtonUp" SelectionMode="Single" SelectionUnit="FullRow">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Table&#xa;    Id" Binding="{Binding TableId}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="User&#xa;  Id" Binding="{Binding UserId}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Table&#xa; Type" Binding="{Binding TableType}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Table&#xa;Status" Binding="{Binding TableStatus}" Width="Auto" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Malfunction&#xa;    Count" Binding="{Binding MalfunctionCount}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction Type" Binding="{Binding MalfunctionType}" Width="250" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction Date&#xa;       Opened" Binding="{Binding MalfunctionDateOpened}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunction Date&#xa;       Closed" Binding="{Binding MalfunctionDateClosed}" Width="Auto" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Malfunction&#xa;    Result" Binding="{Binding MalfunctionResult}" Width="250" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Technician&#xa;      Id" Binding="{Binding TechnicianId}" Width="*" IsReadOnly="True" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                        <StackPanel x:Name="TableSP" Visibility="Hidden" Orientation="Vertical" Margin="0,-25,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox x:Name="TableInWorkCheck" Content="Show In Work" Checked="TableInWork_Checked" Unchecked="TableInWork_Unchecked" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <CheckBox x:Name="TableOpenCheck" Checked="TableOpen_Checked" Unchecked="TableOpen_Unchecked" Margin="20,0,0,0" Content="Show Opened Malfunction" Foreground="#FF020202" BorderBrush="{x:Null}"/>
+                                <Label x:Name="TablesListHeader" Content="Table List" Width="250" Margin="385,0,0,0" FontWeight="Bold" FontSize="18"/>
+                                <Button x:Name="AddNewTable"  Margin="390,0,0,0" Click="AddNewTable_Click" Height="25" Width="170" Background="#FFBFBFBF" BorderBrush="#FFBFBFBF" Foreground="Black">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="PlusBox" Height="21" />
+                                        <TextBlock Text="Add New Table" Margin="5,0,0,0"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <DataGrid x:Name="TableDG" Margin="0,10,0,0" Height="580" Width="Auto" FontSize="18" CanUserAddRows="False" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible"  VerticalGridLinesBrush="Gray" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray" MouseLeftButtonUp="TableDG_MouseLeftButtonUp">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Table Id" Binding="{Binding TableID}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="User Id" Binding="{Binding UserID}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Table Type" Binding="{Binding TableType}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Table Status" Binding="{Binding TableStatus}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Malfunctions Count" Binding="{Binding MalfunctionCount}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Creation Date" Binding="{Binding CreationDate}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Last Time Checked" Binding="{Binding LastTimeChecked}" Width="Auto" IsReadOnly="True" />
+                                    <DataGridTemplateColumn Header="Delete Table"  Width="*" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="DelTable" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="37" Click="DelTable_Click">
+                                                    <Image  Source="/Resources/delete.png" Height="30" Width="32"/>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="GridBoxSegment" Visibility="Hidden" Style="{DynamicResource MaterialDesignCardGroupBox}" Grid.Row="1" Margin="60,0,0,0" Width="1500" Height="633" HorizontalAlignment="Center" VerticalAlignment="Top" materialDesign:ColorZoneAssist.Mode="Custom" materialDesign:ColorZoneAssist.Foreground="White">
+                    <Grid>
+                        <StackPanel x:Name="SegmentMalfunctionSP" Visibility="Visible" Orientation="Vertical" Margin="0,-25,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Label x:Name="SegmentMalHeader" Content="Segment Malfunctions List" Width="300" Margin="620,0,0,0" FontWeight="Bold" FontSize="18"/>
+                            </StackPanel>
+                            <DataGrid x:Name="SegmentMalfunctionDG" Margin="0,10,0,0" Height="580" FontSize="18" Width="Auto" CanUserAddRows="False" AutoGenerateColumns="False" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible"  VerticalGridLinesBrush="Gray" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray"  SelectionMode="Single" SelectionUnit="FullRow" MouseLeftButtonUp="SegmentDG_MouseLeftButtonUp">
+                                <DataGrid.RowStyle>
+                                    <Style TargetType="DataGridRow">
+                                        <Setter Property="Background" Value="{Binding RowColor}"/>
+                                    </Style>
+                                </DataGrid.RowStyle>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Line" Binding="{Binding Line}" Width="300" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Machine" Binding="{Binding Station}" Width="300" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Segment Number" Binding="{Binding SegmentNumber}" Width="300" IsReadOnly="True" />
+                                    <DataGridTextColumn Header="Omit Segment" Visibility="Hidden" Binding="{Binding OmitSegment}" Width="250" IsReadOnly="True"/>
+                                    <DataGridTextColumn Header="Setup" Binding="{Binding Setup}" Width="*" IsReadOnly="True" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FFBFBFBF">
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFBFBFBF"/>
+                </Grid.Effect>
+                <StackPanel>
+                    <Grid Height="150" Background="White" RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Grid.RenderTransform>
+                        <Button x:Name="ButtonOpenMenu" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF676568" Click="ButtonOpenMenu_Click">
+                            <materialDesign:PackIcon Kind="Menu" Width="50" Height="50"/>
+                        </Button>
+                        <Button x:Name="ButtonCloseMenu" Visibility="Collapsed" Height="60" Width="60" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF676568" Click="ButtonCloseMenu_Click">
+                            <materialDesign:PackIcon Kind="ArrowLeft" Width="50" Height="50"/>
+                        </Button>
+                        <Button x:Name="ProfileS" Click="Login_Click" Visibility="Visible" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="Auto" Height="Auto" Margin="10,78,10,24">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources/logo.png" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="ProfileL" Click="Login_Click" Visibility="Hidden" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="Auto" Height="Auto" Margin="10,20,76,28">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources/logo.png" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+                    <ListView x:Name="ListViewMenu" Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
+                        <ListViewItem x:Name="ItemFeeder" Height="90" Cursor="Hand" ToolTip="Feeders Management">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/feeder.png" Height="50" Width="50"/>
+                                <TextBlock Text="Feeders&#x0a;Management" VerticalAlignment="Center" Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemTable" Height="90" Cursor="Hand" ToolTip="Tables Management">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/table.png" Height="50" Width="50"/>
+                                <TextBlock Text="Tables&#x0a;Management" VerticalAlignment="Center" Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemSegment" Height="90" Cursor="Hand" ToolTip="Segments Management">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/segment.png" Height="50" Width="50"/>
+                                <TextBlock Text="Segments&#x0a;Management" VerticalAlignment="Center" Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemExport" Height="70" Cursor="Hand" ToolTip="Export">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/export.png" Height="50" Width="50"/>
+                                <TextBlock Text="Export Excel" VerticalAlignment="Center" Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemStatistics" Height="70" Cursor="Hand" ToolTip="Statistics">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/statistic.png" Height="50" Width="50"/>
+                                <TextBlock Text="Statistics" VerticalAlignment="Center"  Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemUsers" Height="70" Cursor="Hand" ToolTip="Users">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/users.jpg" Height="50" Width="50"/>
+                                <TextBlock Text="Users" VerticalAlignment="Center"  Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemAbout" Height="70" Cursor="Hand" ToolTip="About">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/about.png" Height="50" Width="50"/>
+                                <TextBlock Text="About" VerticalAlignment="Center"  Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="ItemExit" Height="70" Cursor="Hand" ToolTip="Exit">
+                            <StackPanel Orientation="Horizontal">
+                                <Image  Source="/Resources/exit.png" Height="50" Width="50"/>
+                                <TextBlock Text="Exit" VerticalAlignment="Center"  Margin="20 10" FontSize="18" Foreground="Black"/>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                    <Image  Source="/Resources/flex2.png" Height="60" Width="60" Margin="0,380,0,0"/>
+                </StackPanel>
+            </Grid>
+            <Image x:Name="BigLogo" Source="/Resources/flex2.png" Margin="0,0,0,0" Width="600" Height="400"/>
+        </Grid>
+    </Viewbox>
+</Window>

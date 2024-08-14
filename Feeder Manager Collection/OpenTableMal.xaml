@@ -1,0 +1,63 @@
+﻿<Window x:Class="Feeder_Manager.OpenTableMal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Feeder_Manager"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Open Malfunction" Height="530" Width="490.5" Topmost="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI Emoji">
+    <Grid>
+        <Border BorderBrush="#FFC1BFD1" BorderThickness="2"></Border>
+        <Rectangle Height="365" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC8CBCF"/>
+                    <GradientStop Color="#FFC1BFD1" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Open Malfunction" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="36" FontWeight="Bold" Foreground="#DD000000"/>
+        <Rectangle Height="332" VerticalAlignment="Bottom" Margin="35,0,35,81" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <StackPanel Orientation="Vertical" Margin="35,77,35,76">
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                <Label Content="Enter Table ID: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="Table_ID" Text="" HorizontalAlignment="Left" TextAlignment="Center"  VerticalAlignment="Top" Width="150" Margin="70,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+                <Button Margin="10,0,0,0" Click="SearchTable_Click" BorderBrush="{x:Null}" Cursor="Hand">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/search.png" Stretch="Fill"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Table Type: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="Table_Type" IsReadOnly="True" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="31" Margin="93,0,0,0"  VerticalAlignment="Top" Width="191" FontSize="18" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Table Status: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="Table_Status" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Margin="83,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Malfunction Count: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="MalCount" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Margin="36,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Operator ID: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="OperatorID"  TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="191" Margin="86,0,0,0" FontSize="16" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Malfunction Type: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontSize="16" FontWeight="Bold"/>
+                <ComboBox x:Name="Mal_Type" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="31" Margin="45,0,0,0"  VerticalAlignment="Top" Width="191" FontSize="14" FontWeight="Bold" BorderThickness="1" Background="#FFD4D2D2"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,436,0,0">
+            <Button Content="OK" HorizontalAlignment="Left" Click="Ok_Click" Margin="145,0,0,0" VerticalAlignment="Center" Width="80" Height="30" Background="#FFC1BFD1" BorderBrush="#FFC1BFD1" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="CloseBtn" Content="Cancel" HorizontalAlignment="Left" IsCancel="True" Margin="25,0,0,0" VerticalAlignment="Center" Width="80" Height="30" Background="#FFC1BFD1" BorderBrush="#FFC1BFD1" Foreground="Black" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

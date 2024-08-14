@@ -1,0 +1,31 @@
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.csprojAssemblyReference.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection_MarkupCompile.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection_MarkupCompile.lref
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager Collection.exe.config
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager Collection.exe
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Feeder Manager Collection.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\EPPlus.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignColors.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\App.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\MainWindow.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.g.resources
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder_Manager_Collection.Properties.Resources.resources
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.csproj.GenerateResource.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.csproj.CoreCompileInputs.cache
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.csproj.CopyComplete
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.exe
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\Feeder Manager Collection.pdb
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\LogIn.baml
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\FeederInformation.g.cs
+C:\Users\migsasse\source\repos\Feeder Manager Collection\Feeder Manager Collection\obj\Debug\FeederInformation.baml
